@@ -44,15 +44,10 @@ jobs:
         run: hugo mod vendor
       - name: Replace baseURL
         run: |
-          sed -i '' 's#https://zxytech.com/#https://zxytech.github.io/#' config.yml
+          sed -i 's#https://zxytech.com/#https://zxytech.github.io/#' config.yml
       - name: Remove ICP license and gongan beian
         run: |
-          sed -i '' '50d' config.yml && \
-          sed -i '' '49d' config.yml && \
-          sed -i '' '48d' config.yml && \
-          sed -i '' '47d' config.yml && \
-          sed -i '' '46d' config.yml && \
-          sed -i '' '45d' config.yml
+          sed -i '45,50d' config.yml
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
