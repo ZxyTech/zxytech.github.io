@@ -1,0 +1,97 @@
+baseURL: https://zxytech.com/
+
+defaultContentLanguage: zh-cn
+defaultContentLanguageInSubdir: false
+
+languages:
+  zh-cn:
+    title: 仲夏园
+    description: 生命就是用求知的欲望燃烧自己
+    contentDir: content/cn
+    languageName: 中文
+    languageCode: zh-cn
+    weight: 1
+
+enableGitInfo: true
+enableRobotsTXT: true
+
+params:
+  copyright: 仲夏叶
+  privacy_policy: "/privacy-policy/"
+  repo: &repo https://github.com/zxytech/zxytech.com
+  # github_repo: *repo
+  # github_project_repo: *repo
+  # github_branch: main
+  branch: main
+  locale: zh_CN
+  ui:
+    footer_about_disable: true
+    navbar_logo: true
+    navbar_translucent_over_cover_disable: true
+    sidebar_menu_compact: true
+
+  # algolia_docsearch: true
+  offlineSearch: true
+
+  links:
+    developer:
+      - name: GitHub
+        url: https://github.com/zxytech
+        icon: fab fa-github
+      - name: Email
+        url: mailto:supports@zxytech.com
+        icon: fas fa-envelope
+
+  icp_license:
+    name: 蜀ICP备19041178号-1
+    url: https://beian.miit.gov.cn/
+  wangan_beian:
+    name: "川公网安备 51012202000577号"
+    url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202000577
+
+  taxonomy:
+    taxonomyCloud: [tags, categories]
+    taxonomyCloudTitle: ["Tag Cloud", "Categories"]
+    taxonomyPageHeader: [tags, categories]
+
+taxonomies:
+  tag: tags
+  category: categories
+
+markup:
+  goldmark:
+    renderer: { unsafe: true }
+  highlight:
+    style: tango
+  tableOfContents:
+    startLevel: 2
+    endLevel: 5
+    ordered: false
+
+imaging:
+  resampleFilter: CatmullRom
+  quality: 75
+  anchor: smart
+
+outputs:
+  home: [HTML]
+  section: [HTML, RSS, print]
+  taxonomy: [HTML]
+  term: [HTML]
+
+module:
+  proxy: direct
+  hugoVersion:
+    extended: true
+    min: 0.75.0
+  imports:
+    - path: github.com/google/docsy
+    - path: github.com/google/docsy/dependencies
+
+pygmentsCodeFences: true
+pygmentsUseClasses: false
+pygmentsUseClassic: false
+pygmentsStyle: tango
+
+permalinks:
+  blog: "/:section/:year/:month/:day/:slug/"
