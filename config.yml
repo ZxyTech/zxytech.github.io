@@ -30,8 +30,8 @@ params:
     navbar_translucent_over_cover_disable: true
     sidebar_menu_compact: true
 
-  # algolia_docsearch: true
   offlineSearch: true
+  prism_syntax_highlighting: true
 
   links:
     developer:
@@ -53,6 +53,11 @@ params:
     taxonomyCloud: [tags, categories]
     taxonomyCloudTitle: ["Tag Cloud", "Categories"]
     taxonomyPageHeader: [tags, categories]
+
+  mermaid:
+    enable: true
+  katex:
+    enable: true
 
 taxonomies:
   tag: tags

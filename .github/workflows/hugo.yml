@@ -33,7 +33,7 @@ jobs:
       HUGO_VERSION: 0.102.3
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
