@@ -47,12 +47,12 @@ jobs:
           submodules: recursive
       - name: Vendor Hugo Modules
         run: hugo mod vendor
-      - name: Replace baseURL
-        run: |
-          sed -i 's#https://zxytech.com/#https://zxytech.github.io/#' config.yml
-      - name: Remove ICP license and gongan beian
-        run: |
-          sed -i '45,50d' config.yml
+      # - name: Replace baseURL
+      #   run: |
+      #     sed -i 's#https://zxytech.com/#https://zxytech.github.io/#' config.yml
+      # - name: Remove ICP license and gongan beian
+      #   run: |
+      #     sed -i '45,50d' config.yml
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
